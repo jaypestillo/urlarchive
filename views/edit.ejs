@@ -4,22 +4,22 @@
 </ol>
 
 <h1 class="display-4">Edit URL</h1>
-<form method="post" action="/entries/update/<%= entry.id %>">
+<form data-toggle="validator" method="post" action="/entries/update/<%= entry.id %>">
   <div class="form-group">
     <label for="title">title</label>
-    <input type="text" name="title" class="form-control" value="<%= entry.title %>">
+    <input type="text" name="title" class="form-control" value="<%= entry.title %>" required>
   </div>
   <div class="form-group">
     <label for="category">category</label>
-    <input type="text" name="category" class="form-control" value="<%= entry.category %>">
+    <input type="text" name="category" class="form-control" value="<%= entry.category %>" required>
   </div>
   <div class="form-group">
     <label for="date">date</label>
-    <input type="text" name="date" class="form-control" value="<%= entry.date %>">
+    <input type="text" name="date" class="form-control" value="<%= entry.date %>" required>
   </div>
   <div class="form-group">
     <label for="url">url</label>
-    <input type="text" name="url" class="form-control" value="<%= entry.url %>">
+    <input type="text" name="url" class="form-control" value="<%= entry.url %>" required>
   </div>
-  <input type="submit" value="Submit" class="btn">
+  <input type="submit" value="Update" class="btn btn-secondary">
 </form>
