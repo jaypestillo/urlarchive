@@ -1,8 +1,4 @@
-<ol class="breadcrumb">
-  <li class="breadcrumb-item"><a href="/entries/list">URLs</a></li>
-  <li class="breadcrumb-item active">Add</li>
-</ol>
-
+<!-- add.ejs file | A form that is used to add entries to the mongodb database. -->
 <h1 class="display-4">Add URL</h1>
 <form data-toggle="validator" method="post" action="/entries/create">
   <div class="form-group">
@@ -21,5 +17,6 @@
     <label for="url">url</label>
     <input type="text" name="url" placeholder="Add url" class="form-control" required>
   </div>
+  <input type="button" value="Cancel" class="btn btn-secondary" onclick="window.location.href='/entries/list'">
   <input type="submit" value="Add" class="btn btn-secondary">
 </form>

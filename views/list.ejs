@@ -1,12 +1,12 @@
 <h3>URL's</h3>
-<table class="table table-hover table-responsive table-sm">
-  <thead>
+<table class="table table-hover table-sm">
+  <thead class="thead-dark">
     <tr>
       <!-- <th>#</th> -->
-      <th>title</th>
-      <th>category</th>
-      <th>date</th>
-      <th>URL</th>
+      <th align="center" class="w-50">title</th>
+      <th align="center" class="w-30">category</th>
+      <th align="center" class="w-20">date</th>
+      <th align="center" class="w-50">URL</th>
       <th></th>
     </tr>
   </tread>
@@ -21,7 +21,7 @@
         <td>
           <a href="/entries/edit/<%= entry.id %>" class="btn btn-secondary">Edit</a>
           <form class="d-inline" action="/entries/delete/<%= entry.id %>" method="post">
-            <input type="submit" value="Delete" class="btn btn-warning">
+            <input type="submit" value="Delete" class="btn btn-secondary">
           </form>
         </td>
       </tr>

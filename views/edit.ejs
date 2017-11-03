@@ -1,8 +1,4 @@
-<ol class="breadcrumb">
-  <li class="breadcrumb-item"><a href="/entries/list">URLs</a></li>
-  <li class="breadcrumb-item active">Edit</li>
-</ol>
-
+<!-- edit.ejs | A form that is used to edit entries in the mongodb database.  -->
 <h1 class="display-4">Edit URL</h1>
 <form data-toggle="validator" method="post" action="/entries/update/<%= entry.id %>">
   <div class="form-group">
@@ -21,5 +17,6 @@
     <label for="url">url</label>
     <input type="text" name="url" class="form-control" value="<%= entry.url %>" required>
   </div>
+  <button type="cancel" value="Cancel" class="btn btn-secondary" onclick="window.location.href='/entries/list'">Cancel</button>
   <input type="submit" value="Update" class="btn btn-secondary">
 </form>
