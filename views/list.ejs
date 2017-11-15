@@ -1,34 +1,36 @@
-<h3>URL's</h3>
+<div class="fixedSearchBar">
+<h3>Archive</h3>
 <input type="text" class="form-control search" id="search" placeholder="Type to search">
-<div class="container">
-<table class="table table-striped table-hover table-sm" id="dataTable">
+</div>
+<div class="scrollable">
+<table class="table table-hover table-sm" id="dataTable">
   <thead class="thead">
     <tr>
       <!-- <th>#</th> -->
-      <th align="center" >title</th>
-      <th align="center" >category</th>
-      <th align="center" >date</th>
-      <th align="center" >URL</th>
-      <th></th>
+      <th width="320px" align="center" >title</th>
+      <th width="320px" align="center" >category</th>
+      <th width="170px" align="center" >date</th>
+      <th width="170px" align="center" >URL</th>
+      <th width="120px" ></th>
     </tr>
   </thead>
-  <tfoot>
-    <tr>
-      <th align="center" >title</th>
-      <th align="center" >category</th>
-      <th align="center" >date</th>
-      <th align="center" >URL</th>
-      <th></th>
-    </tr>
-  <tbody>
+  <!-- <tfoot> -->
+  <!-- <tr> -->
+  <!-- <th width="320px" align="center" >title</th> -->
+  <!-- <th width="320px" align="center" >category</th> -->
+  <!-- <th width="170px" align="center" >date</th> -->
+  <!-- <th width="170px" align="center" >URL</th> -->
+  <!-- <th width="120px" ></th> -->
+  <!-- </tr> -->
+  <!-- </tfoot> -->
+  <!-- <tbody> -->
     <% entries.forEach(function(entry) { %>
-      <tr>
-        <!-- <td> <%= entry.id %> </td> -->
-        <td><strong><%= entry.title %></strong></td>
-        <td><%= entry.category %></td>
-        <td><%= entry.date %></td>
-        <td><em><%= entry.url %></em></td>
-        <td class="right"><a href="/entries/edit/<%= entry.id %>" class="btn btn-secondary">Update</a></td>
+        <tr>
+          <td width="320px"><strong><%= entry.title %></strong></td>
+          <td width="320px"><%= entry.category %></td>
+          <td width="170px"><%= entry.date %></td>
+          <td width="170px"><em><a href="<%= entry.url %>" target="_blank">URL Link</a></em></td>
+          <td width="120px" class="right"><a href="/entries/edit/<%= entry.id %>" class="btn btn-secondary">Update</a></td>
       </tr>
     <% }) %>
   </tbody>
