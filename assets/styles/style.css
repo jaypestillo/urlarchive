@@ -21,9 +21,12 @@ table[id= dataTable] {
     table-layout: fixed;
 }
 
-table td {
+table td > div {
     table-layout: fixed;
     word-wrap: break-word;
+    height: 50px;
+    overflow: auto;
+    text-align: left;
 }
 
 table th {
@@ -39,10 +42,6 @@ div.scrollable {
     overflow: auto;
 }
 
-.right {
-    text-align: right;
-}
-
 div.fixedSearchBar {
     padding-top: 5px;
     padding-bottom: 3px;
@@ -53,7 +52,7 @@ div.fixedSearchBar {
 tbody {
     display: block;
     width: 1105px;
-    height: 450px;
+    height: 400px;
     overflow: auto;
 }
 

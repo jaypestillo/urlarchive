@@ -9,9 +9,9 @@
       <!-- <th>#</th> -->
       <th width="320px" align="center" >title</th>
       <th width="320px" align="center" >category</th>
-      <th width="170px" align="center" >date</th>
-      <th width="170px" align="center" >URL</th>
-      <th width="120px" ></th>
+      <th width="180px" align="center" >date</th>
+      <th width="180px" align="center" >URL</th>
+      <th width="100px" ></th>
     </tr>
   </thead>
   <!-- <tfoot> -->
@@ -26,11 +26,11 @@
   <!-- <tbody> -->
     <% entries.forEach(function(entry) { %>
         <tr>
-          <td width="320px"><strong><%= entry.title %></strong></td>
-          <td width="320px"><%= entry.category %></td>
-          <td width="170px"><%= entry.date %></td>
-          <td width="170px"><em><a href="<%= entry.url %>" target="_blank">URL Link</a></em></td>
-          <td width="120px" class="right"><a href="/entries/edit/<%= entry.id %>" class="btn btn-secondary">Update</a></td>
+            <td width="320px"><div><strong><%= entry.title %></strong></div></td>
+            <td width="320px"><div><%= entry.category %></div></td>
+            <td width="180px"><div><%= entry.date %></div></td>
+            <td width="180px"><div><em><a href="<%= entry.url %>" target="_blank">URL Link</a></em></div></td>
+            <td width="100px"><div><a href="/entries/edit/<%= entry.id %>" class="btn btn-secondary">Update</a></div></td>
       </tr>
     <% }) %>
   </tbody>
