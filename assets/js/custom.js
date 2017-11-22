@@ -1,21 +1,6 @@
 /******** custom.js | JavaScript file *********/
 
-
-// var $rows = $('#table tr');
-
-// $('#search').keyup(function() {
-
-//     var val = '^(?=.*\\b' + $.trim($(this).val()).split(/\s+/).join('\\b)(?=.*\\b') + ').*$',
-//         reg = RegExp(val, 'i'),
-//         text;
-
-//     $rows.show().filter(function() {
-//         text = $(this).text().replace(/\s+/g, ' ');
-//         return !reg.test(text);
-//     }).hide();
-// });
-
-
+//A fuction used for the search bar
 $(document).ready(function() {
     $('.search').on('keyup', function() {
         var searchTerm = $(this).val().toLowerCase();
@@ -29,3 +14,12 @@ $(document).ready(function() {
         });
     });
 });
+
+
+// //Grabs the date to be placed in a new URL entry
+// var today = moment().format('YYYY-MM-DD');
+// document.getElementById("todayDate").value = today;
+
+
+
+
