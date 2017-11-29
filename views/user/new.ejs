@@ -1,0 +1,44 @@
+<!-- new.ejs file | A form that is used to add users to the mongodb database. -->
+<form action="/user/create" method="POST" id="sign-up-form" class="form-signin" data-toggle="validator">
+	<center><h2 class="display-4">Create an account</h2></center>
+
+  <div class="form-group">
+    <label for="email"></label>
+	  <input type="email" class="form-control" placeholder="email address" name="email" required>
+  </div>
+
+  <div class="form-group">
+    <div class="form-group">
+      <label for="password"></label>
+      <input type="password" minLength="6" class="form-control" placeholder="password" name="password" id="inputPassword" required>
+    </div>
+
+    <div class="form-group">
+      <label for="confirmation"></label>
+  	  <input type="password" class="form-control" id="inputPasswordConfirm" placeholder="password confirmation" name="confirmation" required>
+      <div class="help-block with-errors"></div>
+    </div>
+  </div>
+
+	<input type="submit" class="btn btn-lg btn-secondary btn-block" value="Create Account"/>
+	<input type="hidden" name="_csrf" value="<%= _csrf %>" />
+
+</form>
+
+<script type="text/javascript">
+
+  var password = document.getElementById("inputPassword");
+  var confirmation = document.getElementById("inputPasswordConfirm");
+
+  function validatePassword(){
+    if(password.value != confirmation.value) {
+      confirmation.setCustomValidity("Passwords Don't Match");
+    } else {
+      confirmation.setCustomValidity('');
+    }
+  }
+
+  password.onchange = validatePassword;
+  confirmation.onkeyup = validatePassword;
+
+</script>

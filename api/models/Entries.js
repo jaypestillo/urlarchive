@@ -10,9 +10,9 @@ module.exports = {
   attributes: {
     title: { type: 'string', required: true },
 
-    category: { type: 'string' },
+    category: { type: 'string', required: true },
 
-    date: { type: 'string' },
+    date: { type: 'string', required: true },
 
     url: { type: 'string', required: true }
 
