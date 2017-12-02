@@ -22,12 +22,22 @@ module.exports = {
 				}
 
 				//if error redirect to the signup page.
-				return res.redirect('/user/new');
+				// return res.redirect('/user/new'); //commented out right now for testing purposes.
 			}
 
 			//After the user is successfully created redirect to the show action.
-			res.json(user);
+			//res.json(user);
+			res.redirect('/entries/list/'+user.id);
 		});
-	}
+	},
+
+	// list: function (req, res, next) {
+	// 	User.findOne(req.param('id'), function foundUser (err, user) {
+	// 		if (err) return next(err);
+	// 		if (!user) return next();
+  //
+	// 		res.view({ user: user });
+	// 	});
+	// }
 
 };

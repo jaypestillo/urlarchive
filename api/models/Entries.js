@@ -14,7 +14,9 @@ module.exports = {
 
     date: { type: 'string', required: true },
 
-    url: { type: 'string', required: true }
+    url: { type: 'string', required: true },
+
+    owner: { collection: 'User', via: 'URLs'}
 
 
   },

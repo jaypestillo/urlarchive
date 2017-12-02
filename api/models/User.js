@@ -7,13 +7,16 @@
 
 module.exports = {
 
-  schema: true,
+  // Turn the below field on so that you get rid of the csrf token, and the password from user view and database.
+  // schema: true,
 
   attributes: {
 
     email: { type: 'string', required: true, email: true, unique: true},
 
-    encryptedPassword: { type: 'string'}
+    encryptedPassword: { type: 'string'},
+
+    URLs: { collection: 'Entries', via: 'owner'}
 
   },
 
