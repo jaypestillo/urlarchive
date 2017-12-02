@@ -1,28 +1,30 @@
 <!-- add.ejs file | A form that is used to add entries to the mongodb database. -->
-<form data-toggle="validator" method="POST" action="/entries/create">
-  <center><h1 class="display-4">Add URL</h1></center>
+<div class="formWrapper">
+  <form data-toggle="validator" method="POST" action="/entries/create">
+    <center><h1 class="display-4">Add URL</h1></center>
 
-  <div class="form-group">
-    <label for="title"></label>
-    <input type="text" name="title" placeholder="add title" class="form-control" required>
-  </div>
+    <div class="form-group">
+      <label for="title"></label>
+      <input type="text" name="title" placeholder="add title" class="form-control" required>
+    </div>
 
-  <div class="form-group">
-    <label for="category"></label>
-    <input type="text" name="category" placeholder="add category" class="form-control" required>
-  </div>
+    <div class="form-group">
+      <label for="category"></label>
+      <input type="text" name="category" placeholder="add category" class="form-control" required>
+    </div>
 
-  <div class="form-group">
-    <label for="date"></label>
-    <input id="todayDate" type="date" name="date" class="form-control" required>
-  </div>
+    <div class="form-group">
+      <label for="date"></label>
+      <input id="todayDate" type="date" name="date" class="form-control" required>
+    </div>
 
-  <div class="form-group">
-    <label for="url"></label>
-    <input type="text" name="url" placeholder="add url" class="form-control" required>
-  </div>
+    <div class="form-group">
+      <label for="url"></label>
+      <input type="text" name="url" placeholder="add url" class="form-control" required>
+    </div>
 
-  <input type="button" value="Cancel" class="btn btn-secondary" onclick="window.location.href='/entries/list'">
-  <input type="submit" value="Add" class="btn btn-secondary">
+    <input type="button" value="Cancel" class="btn btn-secondary" onclick="window.location.href='/entries/list'">
+    <input type="submit" value="Add" class="btn btn-secondary">
 
-</form>
+  </form>
+</div>

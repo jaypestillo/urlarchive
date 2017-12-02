@@ -31,6 +31,10 @@ module.exports = {
 		});
 	},
 
+	'signin': function (req, res) {
+		res.view('signin');
+	}
+
 	// list: function (req, res, next) {
 	// 	User.findOne(req.param('id'), function foundUser (err, user) {
 	// 		if (err) return next(err);

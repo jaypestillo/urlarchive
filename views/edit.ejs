@@ -1,29 +1,31 @@
 <!-- edit.ejs | A form that is used to edit entries in the mongodb database.  -->
-<form data-toggle="validator" method="POST" action="/entries/update/<%= entry.id %>">
-  <center><h1 class="display-4">Update URL</h1></center>
+<div class="formWrapper">
+  <form data-toggle="validator" method="POST" action="/entries/update/<%= entry.id %>">
+    <center><h1 class="display-4">Update URL</h1></center>
 
-  <div class="form-group">
-    <label for="title"></label>
-    <input type="text" name="title" class="form-control" value="<%= entry.title %>" required>
-  </div>
+    <div class="form-group">
+      <label for="title"></label>
+      <input type="text" name="title" class="form-control" value="<%= entry.title %>" required>
+    </div>
 
-  <div class="form-group">
-    <label for="category"></label>
-    <input type="text" name="category" class="form-control" value="<%= entry.category %>" required>
-  </div>
+    <div class="form-group">
+      <label for="category"></label>
+      <input type="text" name="category" class="form-control" value="<%= entry.category %>" required>
+    </div>
 
-  <div class="form-group">
-    <label for="date"></label>
-    <input id="date" type="date" name="date" class="form-control" value="<%= entry.date %>" required>
-  </div>
+    <div class="form-group">
+      <label for="date"></label>
+      <input id="date" type="date" name="date" class="form-control" value="<%= entry.date %>" required>
+    </div>
 
-  <div class="form-group">
-    <label for="url"></label>
-    <input type="text" name="url" class="form-control" value="<%= entry.url %>" required>
-  </div>
+    <div class="form-group">
+      <label for="url"></label>
+      <input type="text" name="url" class="form-control" value="<%= entry.url %>" required>
+    </div>
 
-  <button type="button" value="Cancel" class="btn btn-secondary" onclick="window.location.href='/entries/list'">Cancel</button>
-  <input type="submit" value="Update" class="btn btn-secondary">
-  <a href="/entries/delete/<%= entry.id %>" class="btn btn-danger" style="float: right;">Delete</a>
+    <button type="button" value="Cancel" class="btn btn-secondary" onclick="window.location.href='/entries/list'">Cancel</button>
+    <input type="submit" value="Update" class="btn btn-secondary">
+    <a href="/entries/delete/<%= entry.id %>" class="btn btn-danger" style="float: right;">Delete</a>
 
-</form>
+  </form>
+</div>

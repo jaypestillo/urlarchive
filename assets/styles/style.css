@@ -5,18 +5,22 @@ body{
     padding-left: 15px;
 }
 
-h3 {
+h2 {
     display: inline-block;
 }
 
 input[id= search] {
+    float: left;
+    width: 50%;
+}
+
+input[id= addButton] {
     float: right;
-    width: 60%;
-    border-collapse: collapse;
+    width: 120px;
 }
 
 table[id= dataTable] {
-    width: 1105px;
+    width: 800px;
     height: 100%;
     table-layout: fixed;
 }
@@ -30,23 +34,26 @@ table td > div {
 }
 
 div.scrollable {
-    width: 100%;
+    max-width: 800px;
     height: 100%;
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
     overflow: auto;
 }
 
-div.fixedSearchBar {
-    padding-top: 5px;
-    padding-bottom: 3px;
+div.docContainer {
+    max-width: 800px;
+    margin: 0 auto;
+    padding-top: 1px;
+    padding-bottom: 1px;
     padding-right: 3px;
     padding-left: 3px;
+    /*background-color: gray;*/
 }
 
 tbody {
     display: block;
-    width: 1105px;
+    width: 800px;
     height: 350px;
     overflow: auto;
 }
@@ -56,3 +63,7 @@ thead {
     background-color: #f6f6f6;
 }
 
+div.formWrapper {
+  margin: 0 auto;
+  max-width: 600px;
+}
