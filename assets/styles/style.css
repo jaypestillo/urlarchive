@@ -64,6 +64,7 @@ thead {
 }
 
 div.formWrapper {
+  position: relative;
   margin: 0 auto;
   max-width: 600px;
 }
