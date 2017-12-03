@@ -1,8 +1,5 @@
 body{
-    padding-top: 15px;
-    padding-bottom: 15px;
-    padding-right: 15px;
-    padding-left: 15px;
+    padding:15px;
 }
 
 h2 {
@@ -33,24 +30,6 @@ table td > div {
     text-align: left;
 }
 
-div.scrollable {
-    max-width: 800px;
-    height: 100%;
-    margin: 0 auto;
-    padding: 0;
-    overflow: auto;
-}
-
-div.docContainer {
-    max-width: 800px;
-    margin: 0 auto;
-    padding-top: 1px;
-    padding-bottom: 1px;
-    padding-right: 3px;
-    padding-left: 3px;
-    /*background-color: gray;*/
-}
-
 tbody {
     display: block;
     width: 800px;
@@ -63,8 +42,22 @@ thead {
     background-color: #f6f6f6;
 }
 
-div.formWrapper {
+.formWrapper {
   position: relative;
   margin: 0 auto;
   max-width: 600px;
+}
+
+.scrollable {
+    max-width: 800px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0;
+    overflow: auto;
+}
+
+.docContainer {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1px;
 }
