@@ -1,13 +1,13 @@
-<div class="docContainer">
+<div class="docContainer" style="max-width: 800px; margin: 0 auto; padding: 1px;">
     <center><h2 class="display-4">Archive</h2></center>
     <p></p>
     <!-- <p style="display: inline">&nbsp;&nbsp; <b>user:</b> <%= User.email %> </p> -->
-    <input type="text" class="form-control search" id="search" placeholder="Type to search">
-    <input type="button" value="Add URL" class="btn btn-secondary" id="addButton" onclick="window.location.href='/entries/add'">
+    <input type="text" class="form-control search" style="float: left; width: 70%;" id="search" placeholder="Type to search">
+    <input type="button" value="Add URL" class="btn btn-secondary" style="float: right; width: 120px;" id="addButton" onclick="window.location.href='/entries/add'">
 </div>
 <br></br>
-<div class="scrollable">
-    <table class="table table-hover table-sm" id="dataTable">
+<div class="scrollable" style="max-width: 800px; height: 100%; margin: 0 auto; padding: 0; overflow: auto;">
+    <table class="table table-hover table-sm" style="width: 800px; height: 100%; table-layout: fixed;" id="dataTable">
         <thead class="thead">
             <tr>
                 <th width="200px" align="center" >title</th>
