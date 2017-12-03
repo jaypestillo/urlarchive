@@ -4,12 +4,12 @@
   "version": "1.0.0",
   "description": "a Sails application",
   "keywords": [],
-
   "engines": {
     "node": "8.9.x",
     "npm": "5.5.x"
   },
   "dependencies": {
+    "bcrypt": "^1.0.3",
     "chalk": "^2.3.0",
     "ejs": "2.5.7",
     "grunt": "1.0.1",

@@ -1,5 +1,7 @@
 body{
-    padding:15px;
+    padding:10px;
+    padding-left: 40px;
+    padding-right: 40px;
 }
 
 h2 {
@@ -33,7 +35,7 @@ table td > div {
 tbody {
     display: block;
     width: 800px;
-    height: 350px;
+    height: 300px;
     overflow: auto;
 }
 

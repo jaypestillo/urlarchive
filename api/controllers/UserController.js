@@ -16,23 +16,15 @@ module.exports = {
 		User.create( req.params.all(), function userCreated (err, user) {
 			//if error
 			if (err) {
-				//console.log(err);  //for testing purposes
 				req.session.flash = {
 					err: err
 				}
-
 				//if error redirect to the signup page.
-				// return res.redirect('/user/new'); //commented out right now for testing purposes.
+				return res.redirect('/user/new');
 			}
-
-			//After the user is successfully created redirect to the show action.
-			//res.json(user);
+			//After the user is successfully created redirect to the list
 			res.redirect('/entries/list/'+user.id);
 		});
-	},
-
-	'signin': function (req, res) {
-		res.view('signin');
 	}
 
 	// list: function (req, res, next) {

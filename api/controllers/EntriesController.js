@@ -72,23 +72,4 @@ module.exports = {
 			return false;
 	}
 
-	//
-	// //Search function for entries
-	// search: function(req, res) {
-	// 	var searchObj = {};
-	// 	searchObj[criteria] = value;
-	//
-	// 	Entries.find().where(searchObj).done(function(err, entry) {
-	// 		if (err) {
-	// 			res.send(500, {error: 'Database Error'});
-	// 		}
-	// 		else {
-	// 			res.view({
-	//
-	// 			})
-	// 		}
-	// 	})
-	// }
-
-
 };
