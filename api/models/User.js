@@ -7,8 +7,8 @@
 
 module.exports = {
 
-  // Turn the below field on so that you get rid of the csrf token, and the password from user view and database.
-  // schema: true,
+  //The below field gets rid of the _csrf token, the password, and confirmation from user view and database.
+  schema: true,
 
   attributes: {
 
