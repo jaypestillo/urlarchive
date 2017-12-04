@@ -30,11 +30,12 @@ module.exports.policies = {
 
    user: {
      'signin': "flash",
+     'signup': "flash",
+     create: "flash",
      '*': "sessionAuth"
    },
    //need to use entries since I'm sending my user:create to entries:list
    entries: {
-     'signin': "flash",
      '*': "sessionAuth"
    }
 

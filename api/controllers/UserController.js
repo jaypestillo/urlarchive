@@ -7,8 +7,8 @@
 
 module.exports = {
 
-	'new': function (req, res) {
-		res.view('new');
+	'signup': function (req, res) {
+		res.view('signup');
 	},
 
 	create: function (req, res, next) {
@@ -22,6 +22,9 @@ module.exports = {
 				//if error redirect to the signup page.
 				return res.redirect('/user/new');
 			}
+			//log the user in
+			req.session.authenticated = true;
+			req.session.User = user;
 			//After the user is successfully created redirect to the list
 			res.redirect('/entries/list/'+user.id);
 		});
