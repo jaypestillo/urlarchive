@@ -16,7 +16,7 @@ module.exports = {
 
     url: { type: 'string', required: true },
 
-    owner: { model: 'user'}
+    owner: { type: 'string', required: true},
 
 
   },

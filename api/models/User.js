@@ -16,8 +16,6 @@ module.exports = {
 
     encryptedPassword: { type: 'string'},
 
-    URLs: { collection: 'Entries', via: 'owner'}
-
   },
 
   // toJSON: function() {

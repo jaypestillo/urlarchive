@@ -12,7 +12,7 @@ module.exports = {
 	},
 
 	create: function (req, res, next) {
-		//Create a user with the params entered in the new.ejs form.
+		//Create a user with the params entered in the signup.ejs form.
 		User.create( req.params.all(), function userCreated (err, user) {
 			//if error
 			if (err) {
@@ -20,7 +20,7 @@ module.exports = {
 					err: err
 				}
 				//if error redirect to the signup page.
-				return res.redirect('/user/new');
+				return res.redirect('/user/signup');
 			}
 			//log the user in
 			req.session.authenticated = true;

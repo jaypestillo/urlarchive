@@ -26,8 +26,9 @@ module.exports = {
 		var category = req.body.category;
 		var date = req.body.date;
 		var url = req.body.url;
+		var owner = req.body.owner;
 
-		Entries.create({title: title, category: category, date: date, url: url}).exec(function(err) {
+		Entries.create({title: title, category: category, date: date, url: url, owner:owner}).exec(function(err) {
 			if (err) {
 				res.send(500, {error: 'Database Error'});
 			}
