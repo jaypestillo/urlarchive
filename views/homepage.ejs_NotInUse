@@ -1,9 +1,0 @@
-<!-- homepage.ejs | A Welcome page to the Web Application with Links to /entries/list and /entries/add. -->
-
-<br></br>
-<center>
-  <h1 class="display-2"><center>URL Archive</center></h1>
-  <p class="h2">A simple cross-browser URL archive</p>
-</center>
-<a href="/entries/list" class="btn btn-light btn-large btn-block btn-huge">Archive</a>
-<a href="/entries/add" class="btn btn-light btn-large btn-block btn-huge">Add URL</a>
