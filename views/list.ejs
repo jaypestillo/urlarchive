@@ -21,8 +21,6 @@
         <tbody style="display: block; width: 800px; height: 300px; overflow: auto;">
             <% entries.forEach(function(entry) { %>
               <% if (session.User.id == entry.owner) { %>
-                <% console.log(session.User.id); %>
-                <% console.log(entry.owner); %>
                 <tr>
                     <td width="200px"><div><strong><%= entry.title %></strong></div></td>
                     <td width="200px"><div><%= entry.category %></div></td>
