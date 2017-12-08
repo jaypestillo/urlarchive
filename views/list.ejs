@@ -4,6 +4,7 @@
     <p></p>
     <input type="text" class="form-control search" style="float: left; width: 70%;" id="search" placeholder="Type to search">
     <input type="button" value="Add URL" class="btn btn-secondary" style="float: right; width: 120px;" id="addButton" onclick="window.location.href='/entries/add'">
+    <input type="hidden" name="owner" value="<%= session.User.id %>"/>
 </div>
 <br></br>
 <div class="scrollable" style="max-width: 800px; height: 100%; margin: 0 auto; padding: 0; overflow: auto;">
@@ -19,6 +20,9 @@
         </thead>
         <tbody style="display: block; width: 800px; height: 300px; overflow: auto;">
             <% entries.forEach(function(entry) { %>
+              <% if (session.User.id == entry.owner) { %>
+                <% console.log(session.User.id); %>
+                <% console.log(entry.owner); %>
                 <tr>
                     <td width="200px"><div><strong><%= entry.title %></strong></div></td>
                     <td width="200px"><div><%= entry.category %></div></td>
@@ -26,7 +30,7 @@
                     <td width="150px"><div><em><a href="<%= entry.url %>" target="_blank">URL Link</a></em></div></td>
                     <td width="93px"><div><a href="/entries/edit/<%= entry.id %>" class="btn btn-secondary">Update</a></div></td>
                 </tr>
-            <% }) %>
+            <% }}) %>
         </tbody>
     </table>
 </div>
