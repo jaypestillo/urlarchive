@@ -12,8 +12,6 @@ module.exports = {
 
     category: { type: 'string', required: true },
 
-    date: { type: 'string', required: true },
-
     url: { type: 'string', required: true },
 
     owner: { type: 'string', required: true},
