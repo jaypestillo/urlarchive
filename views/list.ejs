@@ -1,6 +1,6 @@
+<!-- list.ejs file | The main page that displays the users entries from the mongodb database. -->
 <div class="docContainer" style="max-width: 800px; margin: 0 auto; padding: 1px;">
     <center><h2 class="display-4">Archive</h2></center>
-    <!-- <p style="display: inline">&nbsp;&nbsp;&nbsp;&nbsp; <b>user:</b> <%= User.email %> </p> -->
     <p></p>
     <input type="text" class="form-control search" style="float: left; width: 70%;" id="search" placeholder="Type to search">
     <input type="button" value="Add URL" class="btn btn-secondary" style="float: right; width: 120px;" id="addButton" onclick="window.location.href='/entries/add'">
@@ -24,7 +24,7 @@
                 <tr>
                     <td width="200px"><div><strong><%= entry.title %></strong></div></td>
                     <td width="200px"><div><%= entry.category %></div></td>
-                    <td width="150px"><div><%= entry.date %></div></td>
+                    <td width="150px"><div><%= entry.updatedAt.toISOString().slice(0,10) %></div></td>
                     <td width="150px"><div><em><a href="<%= entry.url %>" target="_blank">URL Link</a></em></div></td>
                     <td width="93px"><div><a href="/entries/edit/<%= entry.id %>" class="btn btn-secondary">Update</a></div></td>
                 </tr>
